@@ -147,7 +147,7 @@ router.get("/ai/blackbox", (req, res) => {
 
 router.get("/ai/photoleap", (req, res) => {
     const url = req.query.q || req.query.query;
-    if(!url) return res.send({status: false, owner: '@vihangayt0', err: 'Need Prompt !'});
+    if(!url) return res.send({status: false, owner: 'INFINITY', err: 'Need Prompt !'});
     axios.get('https://tti.photoleapapp.com/api/v1/generate?prompt='+url)
         .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta});
@@ -322,7 +322,7 @@ router.get("/search/apkfab", async(req, res) => {
 
 router.get("/search/sticker", (req, res) => {
     const url = req.query.q || req.query.query;
-    if(!url) return res.send({status: false, owner: '@vihangayt0', err: 'Need query to search !'});
+    if(!url) return res.send({status: false, owner: 'INFINITY', err: 'Need query to search !'});
     stickersearch(url)
 .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta});
@@ -665,7 +665,7 @@ router.get("/movie/sinhalasub/tvshow", (req, res) => {
 router.get("/movie/sinhalasub/episode", (req, res) => {
 	
     const url = req.query.url || req.query.link;
-    if(!url) return res.send({status: false, owner: '@VajiraTech', err: 'Please give me a sinhalasub episode url !'});
+    if(!url) return res.send({status: false, owner: 'INFINITY', err: 'Please give me a sinhalasub episode url !'});
     sinhalasub.episodeDl(url)
         .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta});
@@ -885,8 +885,8 @@ router.get("/download/wallpaper", (req, res) => {
 	
     const q = req.query.text || req.query.q
     const page = req.query.page
-    if(!q) return res.send({status: false, owner: '@VajiraTech', err: 'Please give me query !'});
-    if(!page) return res.send({status: false, owner: '@VajiraTech', err: 'Please give me a page !'});
+    if(!q) return res.send({status: false, owner: 'INFINITY', err: 'Please give me query !'});
+    if(!page) return res.send({status: false, owner: 'INFINITY', err: 'Please give me a page !'});
      wallpaper(q,page)
         .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta});
@@ -903,7 +903,7 @@ router.get("/download/tiktokdl", (req, res) => {
 	
     const url = req.query.url || req.query.link
 
-    if(!url) return res.send({status: false, owner: '@VajiraTech', err: 'Please give me tiktok url !'});
+    if(!url) return res.send({status: false, owner: 'INFINITY', err: 'Please give me tiktok url !'});
      tiktokdl(url)
         .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta || {} });
@@ -922,7 +922,7 @@ router.get("/download/mfire", (req, res) => {
 	
     const url = req.query.url || req.query.link
 
-    if(!url) return res.send({status: false, owner: '@VajiraTech', err: 'Please give me mediafire url !'});
+    if(!url) return res.send({status: false, owner: 'INFINITY', err: 'Please give me mediafire url !'});
      mfire(url)
         .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta || {} });
@@ -939,7 +939,7 @@ router.get("/download/fbdown", (req, res) => {
 	
     const url = req.query.url || req.query.link
 
-    if(!url) return res.send({status: false, owner: '@VajiraTech', err: 'Please give me fb url !'});
+    if(!url) return res.send({status: false, owner: 'INFINITY', err: 'Please give me fb url !'});
      fbdown(url)
         .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta || {} });
@@ -989,7 +989,7 @@ router.get("/download/appletonedl", (req, res) => {
 	
     const url = req.query.url || req.query.link
 
-    if(!url) return res.send({status: false, owner: '@VajiraTech', err: 'Please give me appletone url !'});
+    if(!url) return res.send({status: false, owner: 'INFINITY', err: 'Please give me appletone url !'});
      appletonedl(url)
         .then((dadsta) => {
             res.send({status: true, creator: CREATOR, result: dadsta || {} });
