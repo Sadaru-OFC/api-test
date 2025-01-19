@@ -11,8 +11,8 @@ app.set("json spaces", 2);
 
 app.use(api);
 
-app.listen(process.env.PORT || 3000, () => {
-  console.log("OK");
+app.listen(process.env.PORT || 8000, () => {
+  console.log("Done ✅");
 });
 
 module.exports = app;
