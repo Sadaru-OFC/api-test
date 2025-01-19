@@ -11,7 +11,7 @@ app.set("json spaces", 2);
 
 app.use(api);
 
-app.listen(process.env.PORT || 3000, () => {
+app.listen(process.env.PORT || 8001, () => {
   console.log("Done ✅");
 });
 
