@@ -10,9 +10,9 @@ app.use(express.json());
 app.set("json spaces", 2);
 
 app.use(api);
-
-app.listen(process.env.PORT || 3000, () => {
-  console.log("Done ✅");
+const PORT = process.env.PORT || 8000;
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server is running on port ${PORT}`);
 });
 
 module.exports = app;
